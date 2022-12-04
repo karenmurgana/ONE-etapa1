@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <canvas id="creeper" width="600" height="400"></canvas> -->
+
+    <canvas id="suiza" width="600" height="400"></canvas>
+    
+    <br /> <br />
+    <a href="./index.html">Index</a>
+    <a href="./juego_adivinar.html">Juego adivinar</a>
+    <a href="./tercero.html">tercero</a>
+    <a href="./figura_distinta.html">figura_distinta</a>
+    <a href="./circulo1.html">círculo 1</a>
+    
+
+
+    <!-- <script>
+      var pantalla = document.querySelector("#creeper");
+      var pincel = pantalla.getContext("2d");
+      //cabeza
+      pincel.fillStyle = "darkgreen";
+      pincel.fillRect(200, 50, 350, 300);
+      //ojos
+      pincel.fillStyle = "black";
+      pincel.fillRect(250, 110, 90, 90);
+      pincel.fillRect(410, 110, 90, 90);
+      //nariz
+      pincel.fillRect(340, 200, 70, 100);
+      //boca
+      pincel.fillRect(300, 240, 40, 110);
+      pincel.fillRect(410, 240, 40, 110);
+    </script> -->
+
+    <script>
+        var pantalla = document.querySelector("#suiza");
+        var pincel = pantalla.getContext("2d");
+
+        //(x,y,largoX,largoY)
+        //rojo
+        pincel.fillStyle = "red";
+        pincel.fillRect(0,0,600,400);
+
+        //cruz
+        pincel.fillStyle = "white";
+        pincel.fillRect(260,80,80,240);
+        pincel.fillRect(180,160,240,80);
+    </script>
+
+
+  </body>
+</html>

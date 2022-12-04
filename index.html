@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="./juego_adivinar.html">Juego adivinar</a>
+    <a href="./tercero.html">Tercero</a>
+    <a href="./canvas.html">Canvas</a>
+    <a href="./figura_distinta.html">figura_distinta</a>
+    <a href="./circulo1.html">círculo 1</a>
+    <a href="./grafico1.html">gráfico 1</a>
+    <br /> <br />
+    <!--
+    <script>
+      document.write("<br><br><br><br><br>");
+      function diferencia(edad1, edad2) {
+        return edad1 - edad2;
+      }
+
+      document.write("la diferencia es de " + diferencia(28, 24) + " años");
+    </script>
+    -->
+
+    <!--
+    <script>
+      function saltarLinea() {
+        document.write("<br>");
+      }
+
+      function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+      }
+
+      var edad = parseInt(prompt("¿Cuál es tu edad?"));
+      var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+    </script>
+    -->
+    <!--
+    1 – Crea una función de lotería que reciba un número n y sortee un número entre 0 a n, 
+    retornando ese valor. De esta forma, en vez de escribir var numeroPensado = Math.round(Math.random()*n);, 
+    escribirás var numeroPensado = sorteo(n);. Realiza esa modificación, creando una nueva 
+    función y utilízala de forma correcta.
+
+    2 – Hacer que tu juego exhiba, cuando el usuario falle el intento, si el número lanzado 
+    era mayor o menor al número pensando por el programa.
+    -->
+
+    <!-- <script>
+
+      function imprimir(frase) {
+        document.write(frase);
+      }
+
+      //round redondea, random tira al azar
+      function sorteo() {
+        return Math.round(Math.random() * 100);
+      }
+
+      var n = parseInt(prompt("Número entre 1 y 100: "));
+      var noSorteo = sorteo();
+
+      if (noSorteo === n) {
+        imprimir("Usted ganó la lotería con el número " + noSorteo);
+      } else {
+        if(noSorteo>n){
+            imprimir("Usted no ganó, el número fue " + noSorteo + ", el cual es mayor que "+n);
+
+        }else if(noSorteo<n){
+            imprimir("Usted no ganó, el número fue " + noSorteo + ", el cual es menor que "+n);
+
+        }
+      }
+    </script> -->
+    <input />
+    <button>Mostrar texto escrito</button>
+
+    <script>
+      var input = document.querySelector("input");
+
+      function mostrarTexto() {
+        alert(input.value);
+      }
+      var button = document.querySelector("button");
+      button.onclick = mostrarTexto;
+    </script>
+  </body>
+</html>
