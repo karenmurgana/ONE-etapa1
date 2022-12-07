@@ -1,0 +1,7 @@
+Con la position: absolute, yo puedo posicionar mi elemento en cualquier lugar de la página.
+
+¿Por qué necesitamos quitar los estilos con el reset.css que el navegador crea automáticamente? 
+El navegador crea el estilo para todas las etiquetas que considera adecuadas, 
+entonces, necesitamos moverlo para que el estilo que creemos no sea influenciado 
+por el estilo que el navegador agregue.
+
