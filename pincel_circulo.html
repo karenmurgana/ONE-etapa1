@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pincel círculo</title>
+  </head>
+  <body>
+    <a href="./index.html">Index</a>
+    <br />
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+      var pantalla = document.querySelector("canvas");
+      var pincel = pantalla.getContext("2d");
+
+      pincel.fillStyle = "grey";
+      pincel.fillRect(0, 0, 600, 400);
+
+      var puedoDibujar = false;
+
+      var colores = ["blue", "red", "green"];
+      var indiceColorActual = 0; // comienza con blue
+
+      function dibujarCuadrado() {
+        var x = 0;
+        for (let index = 0; index < colores.length; index++) {
+          pincel.fillStyle = colores[index];
+          pincel.fillRect(x, 0, 50, 50);
+          x += 50;
+        }
+      }
+      dibujarCuadrado();
+
+      function dibujarCirculo(evento) {
+        if (puedoDibujar) {
+          var x = evento.pageX - pantalla.offsetLeft;
+          var y = evento.pageY - pantalla.offsetTop;
+          //pincel.fillStyle = "blue";
+          pincel.beginPath();
+          pincel.arc(x, y, 5, 0, 2 * 3.14);
+          pincel.fill();
+        }
+      }
+
+      pantalla.onmousemove = dibujarCirculo;
+
+      function habilitarDibujar() {
+        puedoDibujar = true;
+      }
+
+      function deshabilitarDibujar() {
+        puedoDibujar = false;
+      }
+
+      //click apretado
+      pantalla.onmousedown = habilitarDibujar;
+      //click soltado
+      pantalla.onmouseup = deshabilitarDibujar;
+
+      function elegirColor(evento) {
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+        if (y <= 50 && y > 0 && x <= 50 && x > 0) {
+          pincel.fillStyle = "blue";
+        }
+        if (y <= 50 && y > 0 && x <= 100 && x > 50) {
+          pincel.fillStyle = "red";
+        }
+        if (y <= 50 && y > 0 && x <= 150 && x > 100) {
+          pincel.fillStyle = "green";
+        }
+      }
+
+      pantalla.onclick = elegirColor;
+    </script>
+  </body>
+</html>
