@@ -42,8 +42,8 @@
       //Aquí viene el texto faltante
       function dibujarBarra(x, y, serie, colores, texto) {
         escribirTexto(x + 7, y - 10, texto);
-
         var sumaAltura = 0;
+        
         for (var i = 0; i < serie.length; i++) {
           dibujarRectangulo(x, y + sumaAltura, 50, serie[i], colores[i]);
           sumaAltura += serie[i];
