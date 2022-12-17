@@ -1,0 +1,72 @@
+Ha llegado el momento de que pongas en práctica lo visto en clase. Para hacer esto, sigue los pasos que se enumeran a continuación.
+
+1) En la carpeta que está tu proyecto, realiza cualquier cambio en el archivo index.html;
+
+2) Ejecuta git status y va que hay un cambio para agregar;
+
+3) Ejecuta el comando git checkout - index.html. Verifica si tu cambio se ha deshecho;
+
+4) Nuevamente, realiza algunos cambios en el archivo index.html;
+
+5) Ejecuta el comando git add index.html;
+
+6) Ejecuta el comando git reset HEAD index.html para devolver el archivo index.html al HEAD del proyecto (elimínalo del stage, que es lo que será enviado para el commit);
+
+7) Repite el paso 3;
+
+8) Vuelve a realizar un cambio en el código;
+
+9) Ejecuta el comando git add index.html y el comando git commit -m "Cambiando el código" para realizar un commit;
+
+10) Ejecuta el comando git log y copia el hash de este commit recién creado;
+
+11) Ejecuta el comando git revert {hash}, reemplazando {hash} con el hash que copiaste anteriormente;
+
+12) Verifica que tus cambios se hayan deshecho;
+
+13) Cambia el nombre del curso de Ansible a "Ansible: Infraestructura como código";
+
+14) Ejecuta el comando git stash para guardar estos cambios en el stash;
+
+15) Cambia el nombre del curso de Kubernetes a "Kubernetes: Introducción a la orquestación de containers";
+
+16) Ejecuta el comando git add index.html y el comando git commit -m "Cambiar el nombre del curso de Kubernetes" para realizar un commit;
+
+17) Ejecuta el comando git stash pop para que aparezca el último cambio en el stash;
+
+18) Ejecuta el comando git add index.html y el comando git commit -m "Cambiar el nombre del curso Ansible" para realizar un commit;
+
+19) Ejecuta el comando git push servidorlocal master para enviar todos tus cambios;
+
+20) Ejecuta el comando git log --oneline para ver los commits de forma resumida. Copia el hash del commit de merge con la branch lista;
+
+21) Ejecuta el comando git checkout {hash} reemplazando {hash} con el hash que copiaste;
+
+22) Ve que varios cambios ya no están más presentes;
+
+23) Ejecuta git checkout master para volver a la línea de desarrollo principal.
+
+
+
+Que Git puede ayudarnos a deshacer cambios que no vamos a utilizar;
+Que, para deshacer un cambio antes de agregarlo para commit(con git add), podemos usar el comando git restore <archivos>;
+Que, para deshacer un cambio después de agregarlo paracommit, primero debemos ejecutar git restore --staged <archivos> y luego podemos deshacerlos con git restore <files>;
+Que, para revertir los cambios realizados en un commit, el comando git revert puede ser la solución;
+Que el comando git revert genera un nuevo commit informando que los cambios fueron deshechos;
+Que, para guardar un trabajo y reanudarlo más tarde, podemos usar git stash;
+Que, para ver qué cambios hay en el stash, podemos usar el comando git stash list;
+Que, con el comando git stash apply <número>, podemos aplicar un cambio específico al stash;
+Que el comando git stash drop <número> elimina un elemento determinado del stash;
+Que el comando git stash pop aplica y elimina el último cambio que se agregó alstash;
+Que git checkout sirve para dejar la copia del código de nuestra aplicación en el estado que queremos:
+   git checkout <branch> deja el código en el estado de una branchcon el nombre <branch>;
+   git checkout <hash> deja el código en el estado de commit con el hash <hash>.
+
+
+Que es posible ver qué cambios se hicieron en cada archivo, con el comando git diff;
+Que, al escribir sólo git diff, vemos los cambios en nuestros archivos que no se agregaron para commit (con git add);
+Que es posible comparar cambios entre dos ramas con git diff <branch1> .. <branch2>
+Que es posible comparar los cambios realizados entre un commit y otro, usando el comando git diff <commit1> .. <commit2>;
+Que Git nos permite guardar “marcos” de nuestra aplicación, por ejemplo, generando versiones, a través de git tag;
+Que el comando git tag -a se usa para generar una nueva tag;
+Las Releases de GitHub, que son generadas para cada tag de Git que creamos en nuestro repositorio.
